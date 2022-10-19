@@ -9,15 +9,35 @@ import SwiftUI
 
 struct SideMenuView: View {
     var body: some View {
-        VStack {
-            Text("settings")
-                .font(.title)
+        NavigationView{
+            VStack {
+                Text("Overview")
+                    .font(.title)
+                    .foregroundColor(.white)
+                
+                
+                
+                Button(
+                    "Today")
+                {
+                    print("yes")
+                }
+                //.padding(30)
+                .frame(width: 100, height: 100)
+                //.font(.title)
                 .foregroundColor(.white)
-            Spacer()
+                .background(Color.blue)
+                .cornerRadius(10)
+                
+                Spacer()
+                
+                
+            }
+            //.padding(50)
+            //.background(Color.black)
+            //.edgesIgnoringSafeArea(.bottom)
+            
         }
-            .padding(32)
-            .background(Color.black)
-            .edgesIgnoringSafeArea(.bottom)
     }
 }
 

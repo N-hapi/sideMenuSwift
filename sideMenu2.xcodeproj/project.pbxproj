@@ -55,9 +55,9 @@
 			children = (
 				542F544328FF12EA001FCC97 /* sideMenu2App.swift */,
 				542F544528FF12EA001FCC97 /* ContentView.swift */,
+				5440A304290031DD002AD6DA /* SideMenuView.swift */,
 				542F544728FF12EC001FCC97 /* Assets.xcassets */,
 				542F544928FF12EC001FCC97 /* Preview Content */,
-				5440A304290031DD002AD6DA /* SideMenuView.swift */,
 			);
 			path = sideMenu2;
 			sourceTree = "<group>";

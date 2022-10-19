@@ -26,7 +26,7 @@ struct ContentView: View {
                         //Spacer()
                         SideMenuView()
                             .offset(x: showMenu ? 0 : UIScreen.main.bounds.width - 1000)
-                            
+
                     }.animation(.easeInOut(duration: 0.3), value: showMenu)
                 }
                     .background(Color.black.opacity(showMenu ? 0.5 : 0))
@@ -36,7 +36,7 @@ struct ContentView: View {
                 .navigationTitle("side menu demo")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
 
                     Button {
                         print("Show menu")
