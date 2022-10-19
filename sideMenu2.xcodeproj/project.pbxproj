@@ -11,6 +11,7 @@
 		542F544628FF12EA001FCC97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542F544528FF12EA001FCC97 /* ContentView.swift */; };
 		542F544828FF12EC001FCC97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542F544728FF12EC001FCC97 /* Assets.xcassets */; };
 		542F544B28FF12EC001FCC97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542F544A28FF12EC001FCC97 /* Preview Assets.xcassets */; };
+		5440A305290031DD002AD6DA /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440A304290031DD002AD6DA /* SideMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		542F544528FF12EA001FCC97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		542F544728FF12EC001FCC97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		542F544A28FF12EC001FCC97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5440A304290031DD002AD6DA /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				542F544528FF12EA001FCC97 /* ContentView.swift */,
 				542F544728FF12EC001FCC97 /* Assets.xcassets */,
 				542F544928FF12EC001FCC97 /* Preview Content */,
+				5440A304290031DD002AD6DA /* SideMenuView.swift */,
 			);
 			path = sideMenu2;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5440A305290031DD002AD6DA /* SideMenuView.swift in Sources */,
 				542F544628FF12EA001FCC97 /* ContentView.swift in Sources */,
 				542F544428FF12EA001FCC97 /* sideMenu2App.swift in Sources */,
 			);
