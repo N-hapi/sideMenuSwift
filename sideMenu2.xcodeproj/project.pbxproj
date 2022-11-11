@@ -13,6 +13,7 @@
 		542F544B28FF12EC001FCC97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542F544A28FF12EC001FCC97 /* Preview Assets.xcassets */; };
 		5440A305290031DD002AD6DA /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440A304290031DD002AD6DA /* SideMenuView.swift */; };
 		5440A30A29007D99002AD6DA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440A30929007D99002AD6DA /* ListView.swift */; };
+		54B1F0C4291E8B72006DC6B4 /* SideMenuClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B1F0C3291E8B72006DC6B4 /* SideMenuClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		542F544A28FF12EC001FCC97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5440A304290031DD002AD6DA /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		5440A30929007D99002AD6DA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		54B1F0C3291E8B72006DC6B4 /* SideMenuClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				542F544528FF12EA001FCC97 /* ContentView.swift */,
+				54B1F0C3291E8B72006DC6B4 /* SideMenuClass.swift */,
 				5440A304290031DD002AD6DA /* SideMenuView.swift */,
 				5440A30929007D99002AD6DA /* ListView.swift */,
 			);
@@ -169,6 +172,7 @@
 			files = (
 				5440A30A29007D99002AD6DA /* ListView.swift in Sources */,
 				5440A305290031DD002AD6DA /* SideMenuView.swift in Sources */,
+				54B1F0C4291E8B72006DC6B4 /* SideMenuClass.swift in Sources */,
 				542F544628FF12EA001FCC97 /* ContentView.swift in Sources */,
 				542F544428FF12EA001FCC97 /* sideMenu2App.swift in Sources */,
 			);

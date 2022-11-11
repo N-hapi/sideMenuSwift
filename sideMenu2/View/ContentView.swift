@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showMenu: Bool = false
+    //@State private var showMenu: Bool = false
+    @StateObject var showMenu = sideMenuClass()
 
     var body: some View {
 
@@ -32,11 +33,11 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         //Spacer()
                         SideMenuView()
-                            .offset(x: showMenu ? 0 : UIScreen.main.bounds.width - 1000)
+                            .offset(x: showMenu.showMenu ? 0 : UIScreen.main.bounds.width - 1000)
 
-                    }.animation(.easeInOut(duration: 0.3), value: showMenu)
+                    }.animation(.easeInOut(duration: 0.3), value: showMenu.showMenu)
                 }
-                    .background(Color.black.opacity(showMenu ? 0.5 : 0))
+                .background(Color.black.opacity(showMenu.showMenu ? 0.5 : 0))
 
             }
 
@@ -47,10 +48,10 @@ struct ContentView: View {
 
                     Button {
                         print("Show menu")
-                        self.showMenu.toggle()
+                        self.showMenu.showMenu.toggle()
                     } label: {
 
-                        if showMenu {
+                        if showMenu.showMenu {
 
                             Image(systemName: "xmark")
                                 .font(.title)
