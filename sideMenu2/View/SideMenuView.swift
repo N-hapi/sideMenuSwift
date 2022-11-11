@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SideMenuView: View {
     var body: some View {
-        NavigationView{
-            VStack {
+       // NavigationView{
+        VStack {
                 Text("Overview")
                     .font(.title)
                     .foregroundColor(.white)
@@ -21,6 +21,9 @@ struct SideMenuView: View {
                     "Today")
                 {
                     print("yes")
+                    
+                   
+                    
                 }
                 //.padding(30)
                 .frame(width: 100, height: 100)
@@ -33,11 +36,11 @@ struct SideMenuView: View {
                 
                 
             }
-            //.padding(50)
-            //.background(Color.black)
-            //.edgesIgnoringSafeArea(.bottom)
+            .padding(50)
+            .background(Color.black)
+            .edgesIgnoringSafeArea(.bottom)
             
-        }
+        //}
     }
 }
 

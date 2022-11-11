@@ -17,6 +17,16 @@ struct ContentView: View {
                 Color.mint.ignoresSafeArea(.all, edges: .all)
                 Text("Hello, world!")
                     .padding()
+                Spacer()
+                Button(
+                    "Today")
+                {
+                    //print("yes")
+                    NavigationLink("adding", destination: ListView())
+                    
+                   
+                    
+                }
 
 
 
