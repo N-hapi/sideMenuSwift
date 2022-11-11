@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SideMenuView: View {
     var body: some View {
-       // NavigationView{
+        //NavigationView{
         VStack {
                 Text("Overview")
                     .font(.title)
@@ -17,14 +17,13 @@ struct SideMenuView: View {
                 
                 
                 
-                Button(
-                    "Today")
-                {
-                    print("yes")
-                    
-                   
-                    
-                }
+            Button(action: {
+                print("Floating Button Click")
+            }, label: {
+                NavigationLink(destination: ListView()) {
+                     Text("Open View")
+                 }
+            })
                 //.padding(30)
                 .frame(width: 100, height: 100)
                 //.font(.title)
@@ -40,8 +39,8 @@ struct SideMenuView: View {
             .background(Color.black)
             .edgesIgnoringSafeArea(.bottom)
             
-        //}
-    }
+        }
+   // }
 }
 
 struct SideMenuView_Previews: PreviewProvider {

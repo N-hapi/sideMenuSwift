@@ -15,18 +15,15 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 Color.mint.ignoresSafeArea(.all, edges: .all)
-                Text("Hello, world!")
-                    .padding()
+                
                 Spacer()
-                Button(
-                    "Today")
-                {
-                    //print("yes")
-                    NavigationLink("adding", destination: ListView())
-                    
-                   
-                    
-                }
+                Button(action: {
+                    print("Floating Button Click")
+                }, label: {
+                    NavigationLink(destination: ListView()) {
+                         Text("Open View")
+                     }
+                })
 
 
 
