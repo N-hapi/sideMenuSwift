@@ -9,8 +9,10 @@ import SwiftUI
 
 @main
 struct sideMenu2App: App {
+   
     var body: some Scene {
         WindowGroup {
+          
             ContentView()
         }
     }
