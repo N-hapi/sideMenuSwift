@@ -20,7 +20,7 @@ struct SideMenuView: View {
             Button(action: {
                 print("Floating Button Click")
             }, label: {
-                NavigationLink(destination: ListView()) {
+                NavigationLink(destination: ListView().navigationBarBackButtonHidden(true)) {
                      Text("Open View")
                  }
             })

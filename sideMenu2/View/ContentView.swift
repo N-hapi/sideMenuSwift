@@ -14,8 +14,8 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            var stuff = GeometryReader { _ in
-                 EmptyView()
+            GeometryReader { _ in
+                 
                  VStack(alignment: .leading) {
                      //Spacer()
                      SideMenuView()
@@ -43,7 +43,7 @@ struct ContentView: View {
                      }
                  }
              }
-            stuff
+            
         }
     }
 }
