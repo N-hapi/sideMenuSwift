@@ -1,50 +1,82 @@
 //
-//  ListView.swift
+//  ListView2.swift
 //  sideMenu2
 //
-//  Created by Nael Alshowaikh on 19.10.22.
+//  Created by Nael Alshowaikh on 13.11.22.
+//
+
+//
+//  ListView.swift
+//  Notion-Watch (iOS)
+//
+//  Created by Nael Alshowaikh on 28.07.22.
 //
 
 import SwiftUI
 
 struct ListView: View {
-    @StateObject var showMenu = sideMenuClass()
+    
+    @EnvironmentObject var listViewModel: ListViewModel
+    // removed because now we are using the items that are in the array
+//    @State var items:[ItemModel] = [
+//        ItemModel(title: "Checking", isCompleted: true),
+//        ItemModel(title: "Checking 2", isCompleted: false)
+//    ]
+    
     var body: some View {
-        GeometryReader { _ in
+        NavigationView {
+            ZStack{
+                if listViewModel.items.isEmpty{
+                    Text("no items")
+                }
+                else{
+                    List{
+                        //Now we can loop in each item
+                        ForEach(listViewModel.items){
+                            item in
+                            ListRowView(item: item)
+                                .onTapGesture {
+                                    withAnimation(.linear){
+                                        listViewModel.updateItem(item: item)
+                                    }
+                                }
+                           // items in ListRowView(title: items)
+                            //Text("hello")
+                        }.onDelete(perform: listViewModel.deleteItem)
+                            .onMove(perform: listViewModel.moveItem)
+                        
+                        //ListRowView(title: "something")
+                        
+                    }
+                }
              
-             VStack(alignment: .leading) {
-                 //Spacer()
-                 SideMenuView()
-                     .offset(x: showMenu.showMenu ? 0 : UIScreen.main.bounds.width - 1000)
-
-             }.animation(.easeInOut(duration: 0.3), value: showMenu.showMenu)
-         }
-             .background(Color.black.opacity(showMenu.showMenu ? 0.5 : 0))
-             .navigationTitle("side menu demo")
-             .navigationBarTitleDisplayMode(.inline)
-             .toolbar {
-             ToolbarItem(placement: .navigationBarLeading) {
-                 Button {
-                     print("Show menu")
-                     self.showMenu.showMenu.toggle()
-                 } label: {
-                     if showMenu.showMenu {
-                         Image(systemName: "xmark")
-                             .font(.title)
-                             .foregroundColor(.blue) }
-                     else {
-                         Image(systemName: "text.justify")
-                             .font(.title)
-                             .foregroundColor(.blue) }
-                 }
-             }
-         }
-    }
+                
+            }
         
+                .navigationBarItems(
+                    leading: EditButton(),
+                    trailing:
+                        NavigationLink("add", destination:AddView()))
+                .listStyle(InsetGroupedListStyle())}.navigationViewStyle(StackNavigationViewStyle()).navigationTitle("Today's Todo")
+    }
+    func deleteItem(indexSet: IndexSet ){
+        listViewModel.items.remove(atOffsets: indexSet)
+    }
+    
+    func moveItem(from: IndexSet, to: Int){
+        listViewModel.items.move(fromOffsets: from, toOffset: to)
+    }
 }
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        NavigationView
+        {
+            ListView()
+            
+        }.environmentObject(ListViewModel())
     }
 }
+
+
+

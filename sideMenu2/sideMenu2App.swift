@@ -10,10 +10,14 @@ import SwiftUI
 @main
 struct sideMenu2App: App {
    
+    @StateObject var listViewModel: ListViewModel = ListViewModel()
+    
+    
     var body: some Scene {
+        
         WindowGroup {
-          
-            ContentView()
-        }
-    }
-}
+            NavigationView{
+                ContentView()
+            
+            }.navigationViewStyle(StackNavigationViewStyle()).environmentObject(listViewModel)}
+    }}
