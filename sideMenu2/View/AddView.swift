@@ -12,17 +12,17 @@ struct AddView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var listViewModel: ListViewModel
     @State var textFieldText: String = ""
-    
+
     //for alerts
     @State var showAlert: Bool = false
-    
+
     var body: some View {
-        ScrollView{
+        ScrollView {
             //Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
             VStack {
                 TextField("add txt here", text: $textFieldText)
                     .background(Color.gray)
-                    .frame(height: 50 )
+                    .frame(height: 50)
                     .cornerRadius(100)
                     .padding(.horizontal)
             }.padding(3.0).frame(width: nil)
@@ -34,31 +34,27 @@ struct AddView: View {
                 .background(.black)
                 .frame(height: 55)
                 .cornerRadius(10)
-            
+
         }.navigationTitle("Add an iteam")
-            .alert(isPresented: $showAlert, content:getAlert
-                
-            )
-        
+            .alert(isPresented: $showAlert, content: getAlert
+
+        )
     }
-    func saveButtonPressed(){
+    func saveButtonPressed() {
         listViewModel.addItem(title: textFieldText)
         presentationMode.wrappedValue.dismiss()
         showAlert.toggle()
-        
     }
-    
     func getAlert() -> Alert {
         return Alert(title: Text("Added Task"))
     }
-    
 }
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
+        NavigationView {
             AddView()
         }.environmentObject(ListViewModel())
-        
+
     }
 }

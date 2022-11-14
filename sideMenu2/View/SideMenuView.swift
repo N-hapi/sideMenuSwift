@@ -11,36 +11,30 @@ struct SideMenuView: View {
     var body: some View {
         //NavigationView{
         VStack {
-                Text("Overview")
-                    .font(.title)
-                    .foregroundColor(.white)
-                
-                
-                
+            Text("Overview")
+                .font(.title)
+                .foregroundColor(.white)
             Button(action: {
                 print("Floating Button Click")
             }, label: {
-                NavigationLink(destination: ListView().navigationBarBackButtonHidden(true)) {
-                     Text("Open View")
-                 }
-            })
-                //.padding(30)
-                .frame(width: 100, height: 100)
-                //.font(.title)
-                .foregroundColor(.white)
+                    NavigationLink(destination: ListView().navigationBarBackButtonHidden(true)) {
+                        Text("Open View")
+                    }
+                })
+            //.padding(30)
+            .frame(width: 100, height: 100)
+            //.font(.title)
+            .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(10)
-                
-                Spacer()
-                
-                
-            }
+            Spacer()
+
+        }
             .padding(50)
             .background(Color.black)
             .edgesIgnoringSafeArea(.bottom)
-            
-        }
-   // }
+    }
+    // }
 }
 
 struct SideMenuView_Previews: PreviewProvider {

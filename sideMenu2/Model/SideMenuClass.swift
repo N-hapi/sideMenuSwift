@@ -10,6 +10,4 @@ import Foundation
 
 class sideMenuClass: ObservableObject {
     @Published var showMenu: Bool = false
-    
-    
 }
